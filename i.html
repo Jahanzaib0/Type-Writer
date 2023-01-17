@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #i{
+            height: 8px;
+            width: 8px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="typeWriter()">Click me</button>
+    <p id="i"></p>
+</body>
+<script>
+    let k = prompt("Enter your Name")
+    var i = 0;
+var txt = `Hello I am ${k}`+ " acha chalta hu dua karna"; 
+var speed = 100; 
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("i").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+
+</script>
+</html>
